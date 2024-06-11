@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "232016844867",
+    "project_id": "soulswipe-e882e",
+    "storage_bucket": "soulswipe-e882e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232016844867:android:a514fffca584b90d259cf6",
+        "android_client_info": {
+          "package_name": "com.example.soulswipe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232016844867-rsfgdj9me8q8n116kid2pn5k4rtiiogm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.soulswipe",
+            "certificate_hash": "34a9976297510e574d040f36830b0208be51f18f"
+          }
+        },
+        {
+          "client_id": "232016844867-8jg59hgji2blu6pt327q60paojcqg763.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2SvWkuA2XfAxLPLZinQaCvA2fRC-J4bA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232016844867-8jg59hgji2blu6pt327q60paojcqg763.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

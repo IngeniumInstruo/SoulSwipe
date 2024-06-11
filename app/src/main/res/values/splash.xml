@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/tinder_color</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/tinder_logo1</item>
+        <item name="windowSplashScreenAnimationDuration">200</item>
+        <item name="postSplashScreenTheme">@style/Theme.SoulSwipe</item>
+    </style>
+</resources>
