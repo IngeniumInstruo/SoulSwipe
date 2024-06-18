@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -15,12 +14,9 @@
         android:theme="@style/Theme.App.Starting"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
             android:name=".MessageActivity"
             android:exported="false" />
         <activity
-=======
->>>>>>> origin/main
             android:name=".CreateAccountActivity"
             android:exported="false" />
         <activity

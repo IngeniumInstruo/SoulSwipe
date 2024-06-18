@@ -16,11 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
-<<<<<<< HEAD
         app:itemIconTint="@drawable/bottom_navbar_style"
         app:itemTextColor="@drawable/bottom_navbar_style"
-=======
->>>>>>> origin/main
         app:menu="@menu/bottom_navigation_menu" />
 
 </RelativeLayout>

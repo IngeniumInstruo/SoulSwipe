@@ -1,9 +1,6 @@
 package com.example.soulswipe;
 import android.content.Context;
-<<<<<<< HEAD
 import android.util.Log;
-=======
->>>>>>> origin/main
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,22 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-<<<<<<< HEAD
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
-=======
-
->>>>>>> origin/main
 import java.util.List;
 
 public class CardStackAdapter extends RecyclerView.Adapter<CardStackAdapter.ViewHolder> {
 
     private List<CardModel> items;
     private Context context;
-<<<<<<< HEAD
     private static CardStackAdapter instance;
 
     public static synchronized CardStackAdapter getInstance(List<CardModel> items, Context context){
@@ -38,8 +30,6 @@ public class CardStackAdapter extends RecyclerView.Adapter<CardStackAdapter.View
         }
         return instance;
     }
-=======
->>>>>>> origin/main
 
     public CardStackAdapter(List<CardModel> items, Context context) {
         this.context = context;
@@ -67,7 +57,6 @@ public class CardStackAdapter extends RecyclerView.Adapter<CardStackAdapter.View
         return items.size();
     }
 
-<<<<<<< HEAD
     public void updateInterest(String interest){
         items = new ArrayList<>();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -94,8 +83,6 @@ public class CardStackAdapter extends RecyclerView.Adapter<CardStackAdapter.View
         instance = null;
     }
 
-=======
->>>>>>> origin/main
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView title;
         ImageView image;

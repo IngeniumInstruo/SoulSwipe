@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-=======
->>>>>>> origin/main
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,7 +13,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-<<<<<<< HEAD
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
@@ -55,8 +51,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-=======
->>>>>>> origin/main
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -67,7 +61,6 @@
             <AutoCompleteTextView
                 android:id="@+id/autoCompleteTextView1"
                 android:layout_width="match_parent"
-<<<<<<< HEAD
                 android:layout_height="wrap_content"
                 android:inputType="none"
                 android:cursorVisible="false"/>
@@ -80,12 +73,6 @@
             android:text="Edit Profile" />
 
         <Button
-=======
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
->>>>>>> origin/main
             android:id="@+id/logoutBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
