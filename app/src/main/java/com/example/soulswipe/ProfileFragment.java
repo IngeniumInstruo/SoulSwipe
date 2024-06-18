@@ -101,6 +101,7 @@ public class ProfileFragment extends Fragment {
 
         editBtn.setOnClickListener((View v)->{
             Intent intent = new Intent(requireContext(), CreateAccountActivity.class);
+            intent.putExtra("create",false);
             startActivity(intent);
         });
 

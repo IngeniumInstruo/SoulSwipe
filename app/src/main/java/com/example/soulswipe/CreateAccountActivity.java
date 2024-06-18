@@ -144,8 +144,12 @@ public class CreateAccountActivity extends AppCompatActivity {
                     .set(user,SetOptions.merge())
                     .addOnSuccessListener(aVoid -> {
                         Log.d("TAG", "DocumentSnapshot successfully written!");
-                        startActivity(intent);
+                        boolean createAccount = this.getIntent().getBooleanExtra("create",false);
+                        if(createAccount){
+                            startActivity(intent);
+                        }
                         finish();
+
                     })
                     .addOnFailureListener(e -> Log.w("TAG", "Error adding document", e));
         });

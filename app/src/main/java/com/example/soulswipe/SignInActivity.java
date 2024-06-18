@@ -114,7 +114,7 @@ public class SignInActivity extends AppCompatActivity {
 
                                     HashMap<String, Object> googleUser = new HashMap<>();
                                     googleUser.put("name",name);
-                                    googleUser.put("picture","blank.webp");
+                                    googleUser.put("picture","1718684649893");
                                     googleUser.put("gender","Male");
 
                                     db.collection("users").document(user.getUid())
@@ -122,6 +122,7 @@ public class SignInActivity extends AppCompatActivity {
                                             .addOnSuccessListener(aVoid -> {
                                                 Log.d("TAG", "DocumentSnapshot successfully written!");
                                                 Intent createAccountIntent = new Intent(this,CreateAccountActivity.class);
+                                                createAccountIntent.putExtra("create",true);
                                                 startActivity(createAccountIntent);
                                                 finish();
                                             })
@@ -132,6 +133,7 @@ public class SignInActivity extends AppCompatActivity {
                             } else {
                                 Intent mainActivityIntent = new Intent(this, MainActivity.class);
                                 startActivity(mainActivityIntent);
+                                finish();
                             }
                         }
 

@@ -70,10 +70,9 @@ public class CardFragment extends Fragment {
 
             @Override
             public void onCardSwiped(Direction direction) {
-                if((direction == Direction.Right) && items.size() > manager.getTopPosition()-1){
-
+                if((direction == Direction.Right) && CardStackAdapter.getInstance(items,requireContext()).getItemCount() > manager.getTopPosition()-1){
                     String authUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                    String partnerUid = items.get(manager.getTopPosition()-1).getUid();
+                    String partnerUid = CardStackAdapter.getInstance(items,requireContext()).getItem(manager.getTopPosition()-1).getUid();
                     HashMap<String,String> uidMap = Helper.getInstance().compareUid(authUid,partnerUid);
 
                     DocumentReference matchRef = db.collection("matches").document(uidMap.get("objectUid"));

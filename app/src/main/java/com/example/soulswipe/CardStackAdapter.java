@@ -57,6 +57,10 @@ public class CardStackAdapter extends RecyclerView.Adapter<CardStackAdapter.View
         return items.size();
     }
 
+    public CardModel getItem(int position){
+        return items.get(position);
+    }
+
     public void updateInterest(String interest){
         items = new ArrayList<>();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
