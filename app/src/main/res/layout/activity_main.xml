@@ -9,6 +9,7 @@
     android:background="@color/black"
     tools:context=".MainActivity">
 
+<<<<<<< HEAD
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -18,14 +19,20 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         tools:ignore="MissingConstraints" />
 
+=======
+>>>>>>> origin/main
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_navigation"
         tools:layout_editor_absoluteX="166dp"
+<<<<<<< HEAD
         tools:layout_editor_absoluteY="83dp"
         android:layout_marginTop="?attr/actionBarSize"/>
+=======
+        tools:layout_editor_absoluteY="83dp" />
+>>>>>>> origin/main
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -38,5 +45,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 </androidx.constraintlayout.widget.ConstraintLayout>

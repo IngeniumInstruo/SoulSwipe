@@ -2,7 +2,10 @@ package com.example.soulswipe;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+<<<<<<< HEAD
 import android.net.Uri;
+=======
+>>>>>>> origin/main
 import android.os.Bundle;
 import android.util.Log;
 
@@ -30,10 +33,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+<<<<<<< HEAD
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 
 import java.util.HashMap;
+=======
+>>>>>>> origin/main
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -107,6 +113,7 @@ public class SignInActivity extends AppCompatActivity {
                         if (user != null) {
                             boolean isNewUser = task.getResult().getAdditionalUserInfo().isNewUser();
                             if (isNewUser) {
+<<<<<<< HEAD
                                 if (user != null) {
                                     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -132,6 +139,15 @@ public class SignInActivity extends AppCompatActivity {
                             } else {
                                 Intent mainActivityIntent = new Intent(this, MainActivity.class);
                                 startActivity(mainActivityIntent);
+=======
+                                Intent createAccountIntent = new Intent(this,CreateAccountActivity.class);
+                                startActivity(createAccountIntent);
+                                finish();
+                            } else {
+                                Intent mainActivityIntent = new Intent(this, MainActivity.class);
+                                startActivity(mainActivityIntent);
+                                finish();
+>>>>>>> origin/main
                             }
                         }
 

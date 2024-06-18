@@ -4,6 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">#fd5564</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
+<<<<<<< HEAD
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#fd5564</item>
@@ -15,6 +16,13 @@
         <item name="colorOnSurface">@color/white</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:editTextColor">@color/white</item>
+=======
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+>>>>>>> origin/main
         <!-- Status bar color. -->
 <!--        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
         <!-- Customize your theme here. -->

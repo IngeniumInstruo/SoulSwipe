@@ -1,5 +1,6 @@
 package com.example.soulswipe;
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
@@ -11,10 +12,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
+=======
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+>>>>>>> origin/main
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+<<<<<<< HEAD
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -38,11 +46,23 @@ public class MatchFragment extends Fragment {
 
     public MatchFragment() {
 
+=======
+public class MatchFragment extends Fragment {
+
+    public MatchFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+>>>>>>> origin/main
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+<<<<<<< HEAD
         View view = inflater.inflate(R.layout.fragment_match, container, false);
         String userUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -138,4 +158,9 @@ public class MatchFragment extends Fragment {
         return view;
     }
 
+=======
+
+        return inflater.inflate(R.layout.fragment_match, container, false);
+    }
+>>>>>>> origin/main
 }

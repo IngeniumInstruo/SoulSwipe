@@ -15,9 +15,12 @@
         android:theme="@style/Theme.App.Starting"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".MessageActivity"
             android:exported="false" />
         <activity
+=======
+>>>>>>> origin/main
             android:name=".CreateAccountActivity"
             android:exported="false" />
         <activity

@@ -1,5 +1,6 @@
 package com.example.soulswipe;
 
+<<<<<<< HEAD
 import static android.widget.AdapterView.*;
 
 import static androidx.core.content.ContentProviderCompat.requireContext;
@@ -12,10 +13,18 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+=======
+import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+>>>>>>> origin/main
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+<<<<<<< HEAD
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +33,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+=======
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ImageView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+>>>>>>> origin/main
 import androidx.core.splashscreen.SplashScreen;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -37,20 +57,31 @@ import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
+<<<<<<< HEAD
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
+=======
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+>>>>>>> origin/main
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+<<<<<<< HEAD
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
+=======
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+>>>>>>> origin/main
 import java.util.Map;
 
 public class CreateAccountActivity extends AppCompatActivity {
@@ -58,9 +89,12 @@ public class CreateAccountActivity extends AppCompatActivity {
     private StorageReference storageRef;
     private ImageView imageView;
     Map<String, Object> user;
+<<<<<<< HEAD
     MaterialAutoCompleteTextView autoCompleteTextView;
     ArrayAdapter<String> adapter;
 
+=======
+>>>>>>> origin/main
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -78,6 +112,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         user = new HashMap<>();
 
+<<<<<<< HEAD
 
         autoCompleteTextView = findViewById(R.id.genderEdt);
 
@@ -98,12 +133,46 @@ public class CreateAccountActivity extends AppCompatActivity {
             user.put("gender", selectedItem);
             autoCompleteTextView.clearFocus();
         });
+=======
+        TextInputLayout textInputLayout = findViewById(R.id.textInputLayout);
+        @SuppressLint("WrongViewCast") MaterialAutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+
+        String[] items = {"Male", "Female"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, items);
+
+        // Set the adapter to the AutoCompleteTextView
+        autoCompleteTextView.setAdapter(adapter);
+
+        // Set a listener to get the selected item
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItem = (String) parent.getItemAtPosition(position);
+                user.put("gender", selectedItem);
+            }
+        });
+
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(year, month, dayOfMonth);
+                Date birthdate = calendar.getTime();
+
+                user.put("birthdate", new Timestamp(birthdate));
+            }
+        }, year, month, day);
+
+>>>>>>> origin/main
 
         imageView = findViewById(R.id.imageView3);
 
         storageRef = FirebaseStorage.getInstance().getReference();
 
         Button chooseImageButton = findViewById(R.id.chooseButton);
+<<<<<<< HEAD
         TextView nameTxt = findViewById(R.id.nameTxt);
         EditText birthdateEdt = findViewById(R.id.birthdateEdt);
 
@@ -185,6 +254,36 @@ public class CreateAccountActivity extends AppCompatActivity {
                 });
 
 
+=======
+        Button birthdateButton = findViewById(R.id.birthdateBtn);
+        birthdateButton.setOnClickListener(view->{
+            datePickerDialog.show();
+        });
+        Button submitBtn = findViewById(R.id.submitBtn);
+        Intent intent = new Intent(this,MainActivity.class);
+        submitBtn.setOnClickListener(view -> {
+            user.put("name", nameEdt.getText().toString());
+
+            db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                    .set(user)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Log.d("TAG", "DocumentSnapshot successfully written!");
+
+                            startActivity(intent);
+                            finish();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w("TAG", "Error adding document", e);
+                        }
+                    });
+        });
+        chooseImageButton.setOnClickListener(view -> openGallery());
+>>>>>>> origin/main
     }
 
     private void openGallery() {
@@ -207,6 +306,10 @@ public class CreateAccountActivity extends AppCompatActivity {
 
     private void uploadImageToFirebase(Uri imageUri) {
         long imageName = System.currentTimeMillis();
+<<<<<<< HEAD
+=======
+        user.put("picture", imageName);
+>>>>>>> origin/main
         StorageReference imageRef = storageRef.child("images/" + imageName);
         UploadTask uploadTask = imageRef.putFile(imageUri);
 
@@ -215,6 +318,7 @@ public class CreateAccountActivity extends AppCompatActivity {
             .into(imageView);
 
         uploadTask.addOnFailureListener(exception -> {
+<<<<<<< HEAD
             Log.e("TAG", "Upload failed: " + exception.getMessage());
         }).addOnSuccessListener(taskSnapshot -> {
             Log.d("TAG", "Upload successful");
@@ -233,5 +337,19 @@ public class CreateAccountActivity extends AppCompatActivity {
         super.onResume();
 
         autoCompleteTextView.setAdapter(adapter);
+=======
+            // Handle unsuccessful uploads
+            Log.e("TAG", "Upload failed: " + exception.getMessage());
+        }).addOnSuccessListener(taskSnapshot -> {
+            // Handle successful uploads on complete
+            Log.d("TAG", "Upload successful");
+            // Get the download URL for the image
+            imageRef.getDownloadUrl().addOnSuccessListener(uri -> {
+                String imageUrl = uri.toString();
+                // Do something with the image URL (e.g., save it to a database)
+                Log.d("TAG", "Image URL: " + imageUrl);
+            });
+        });
+>>>>>>> origin/main
     }
 }

@@ -2,11 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+=======
+>>>>>>> origin/main
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+<<<<<<< HEAD
     android:background="@color/black"
     tools:context=".CreateAccountActivity">
 
@@ -62,6 +66,17 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
+=======
+    tools:context=".CreateAccountActivity">
+
+    <EditText
+        android:id="@+id/nameEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+>>>>>>> origin/main
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -70,6 +85,7 @@
         android:layout_height="wrap_content"
         android:hint="Gender">
 
+<<<<<<< HEAD
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
             android:id="@+id/genderEdt"
             android:layout_width="match_parent"
@@ -92,6 +108,12 @@
             android:focusable="false"
             android:inputType="none"
             android:onClick="showDatePicker" />
+=======
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+>>>>>>> origin/main
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -103,9 +125,27 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <Button
+<<<<<<< HEAD
+=======
+        android:id="@+id/birthdateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set birthday" />
+
+    <Button
+>>>>>>> origin/main
         android:id="@+id/submitBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit" />
 
+<<<<<<< HEAD
+=======
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/kim_yoo_jung" />
+
+>>>>>>> origin/main
 </LinearLayout>

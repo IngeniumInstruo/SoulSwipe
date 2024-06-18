@@ -1,17 +1,26 @@
 package com.example.soulswipe;
 
 import android.annotation.SuppressLint;
+<<<<<<< HEAD
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+=======
+import android.os.Bundle;
+import android.util.Log;
+>>>>>>> origin/main
 import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
+<<<<<<< HEAD
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+=======
+import androidx.appcompat.app.AppCompatActivity;
+>>>>>>> origin/main
 import androidx.core.splashscreen.SplashScreen;
 import androidx.viewpager.widget.ViewPager;
 
@@ -53,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+<<<<<<< HEAD
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -61,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(actionBarView);
+=======
+        if(getSupportActionBar() != null){
+            getSupportActionBar().hide();
+        }
+>>>>>>> origin/main
 
         viewPager = findViewById(R.id.view_pager);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -91,7 +106,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
+<<<<<<< HEAD
 
+=======
+                // Update BottomNavigationView item selection
+>>>>>>> origin/main
                 bottomNavigationView.getMenu().getItem(position).setChecked(true);
             }
 
@@ -99,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPageScrollStateChanged(int state) {}
         });
     }
+<<<<<<< HEAD
 
     @Override
     protected void onDestroy() {
@@ -108,4 +128,6 @@ public class MainActivity extends AppCompatActivity {
         ConversationAdapter.getInstance(new ArrayList<>(),this).clearList();
         MessageAdapter.getInstance(new ArrayList<>(),this).clearList();
     }
+=======
+>>>>>>> origin/main
 }

@@ -14,6 +14,10 @@ import java.io.InputStream;
 public class MyAppGlideModule extends AppGlideModule {
     @Override
     public void registerComponents(Context context, Glide glide, Registry registry) {
+<<<<<<< HEAD
+=======
+        // Register FirebaseImageLoader to handle StorageReference
+>>>>>>> origin/main
         registry.append(StorageReference.class, InputStream.class,
                 new FirebaseImageLoader.Factory());
     }

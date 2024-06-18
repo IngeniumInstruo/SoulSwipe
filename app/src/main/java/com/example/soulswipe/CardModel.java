@@ -1,8 +1,12 @@
 package com.example.soulswipe;
 
+<<<<<<< HEAD
 import java.io.Serializable;
 
 public class CardModel implements Serializable {
+=======
+public class CardModel {
+>>>>>>> origin/main
     private String title;
     private String image;
     private String uid;
